@@ -11,6 +11,8 @@
 
 BOT_NAME = 'appstore'
 
+# This is just a testing line, will remove later.
+
 SPIDER_MODULES = ['appstore.spiders']
 NEWSPIDER_MODULE = 'appstore.spiders'
 
