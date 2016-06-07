@@ -25,8 +25,14 @@ MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
 MONGODB_DB = "xiaomi"
 MONGODB_COLLECTION = 'apps'
-DOWNLOAD_DELAY = 1
+DOWNLOAD_DELAY = 0.0001
 LOG_FILE = 'xiaomi.log'
+
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware' : None,
+    'appstore.random_useragent.RandomUserAgentMiddleware' : 400,
+    'appstore.random_proxy.RandomProxyMiddleware' : 100,
+}
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
